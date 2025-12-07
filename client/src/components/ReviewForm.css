@@ -1,0 +1,108 @@
+.review-form-container {
+  margin-top: 30px;
+  padding: 20px 18px;
+  border-radius: 16px;
+  background: #0c1827;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.review-form-title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #dbe8ff;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.review-form-field {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-form-field label {
+  font-size: 13px;
+  color: #9fb3c9;
+}
+
+.review-form-field input,
+.review-form-field select,
+.review-form-field textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  background: #0a1320;
+  color: #dbe8ff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.review-form-field input::placeholder,
+.review-form-field textarea::placeholder {
+  color: #6f8299;
+}
+
+.review-form-field input:focus,
+.review-form-field select:focus,
+.review-form-field textarea:focus {
+  border-color: #3a9bff;
+  box-shadow: 0 0 0 2px rgba(58, 155, 255, 0.25);
+  background: #0d1726;
+}
+
+.review-form-field textarea {
+  resize: vertical;
+}
+
+.review-form-error {
+  color: #ff7a7a;
+  font-size: 13px;
+}
+
+/* Submit button */
+.review-form-submit {
+  align-self: flex-start;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2d7be8, #55a4ff);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(20, 60, 120, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.review-form-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(20, 60, 120, 0.7);
+}
+
+.review-form-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .review-form-container {
+    padding: 16px 14px;
+  }
+}

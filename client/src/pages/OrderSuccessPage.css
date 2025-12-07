@@ -1,0 +1,118 @@
+/* ===== Success Page Wrapper ===== */
+.order-success-container {
+  background: radial-gradient(circle at top, #07111f 0%, #050b14 45%, #030711 100%);
+  min-height: 100vh;
+  padding: 40px 8% 70px;
+  color: #dbe8ff;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===== Main Title ===== */
+.order-success-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f6c453;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(246, 196, 83, 0.3);
+}
+
+/* ===== Order Info ===== */
+.order-success-details {
+  font-size: 16px;
+  color: #bcd2f0;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.order-success-details strong {
+  color: #f6c453;
+}
+
+/* ===== Customer Name ===== */
+.order-success-customer {
+  margin-top: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #e3eeff;
+}
+
+/* ===== Message Text ===== */
+.order-success-message {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #9bb2d0;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* ===== Buttons Section ===== */
+.order-success-actions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Download Receipt Button (reuse checkout theme) */
+.order-success-download {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2d7be8, #55a4ff);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 12px 32px rgba(12, 54, 112, 0.85);
+  transition: 0.2s ease;
+}
+
+.order-success-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(12, 54, 112, 1);
+}
+
+/* Home Link */
+.order-success-home {
+  color: #f6c453;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: 0.2s ease;
+}
+
+.order-success-home:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.04);
+}
+
+/* ===== Fade Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .order-success-title {
+    font-size: 26px;
+  }
+  .order-success-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,132 @@
+.collections-main {
+  background: radial-gradient(circle at top, #091425 0%, #050b14 45%, #040812 100%);
+  min-height: 100vh;
+  padding: 40px 8% 70px;
+  color: #dbe8ff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ───── Header Section ───── */
+.collections-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(171, 196, 255, 0.18);
+  padding-bottom: 14px;
+}
+
+.collections-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f5f7ff;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+
+.collections-header h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 54px;
+  height: 3px;
+  background: linear-gradient(90deg, #f6c453, #f8a9ff);
+  border-radius: 999px;
+}
+
+.collections-header p {
+  font-size: 15px;
+  color: #9fb3c9;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ───── Sort Filter ───── */
+.collections-controls label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c3d3e9;
+}
+
+.collections-controls select {
+  margin-left: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(171, 196, 255, 0.4);
+  background: rgba(7, 17, 33, 0.9);
+  font-size: 14px;
+  color: #dbe8ff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.collections-controls select:hover {
+  border-color: #f6c453;
+  box-shadow: 0 0 0 1px rgba(246, 196, 83, 0.5);
+}
+
+.collections-controls select:focus {
+  outline: none;
+  border-color: #f6c453;
+  box-shadow: 0 0 0 2px rgba(246, 196, 83, 0.45);
+}
+
+/* ───── Empty / Loading Status ───── */
+.collections-status {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #9fb3c9;
+  animation: fadeIn 0.8s ease;
+}
+
+/* ───── Product Grid ───── */
+.collection-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 26px;
+  margin-top: 16px;
+}
+
+.collection-products > * {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* (optional) subtle glow behind the grid */
+.collection-products::before {
+  content: "";
+  grid-column: 1 / -1;
+  height: 0;
+  pointer-events: none;
+}
+
+/* ───── Responsive ───── */
+@media (max-width: 768px) {
+  .collections-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .collections-header h1 {
+    font-size: 26px;
+  }
+
+  .collections-header p {
+    font-size: 14px;
+  }
+}
+
+/* ───── Animations ───── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

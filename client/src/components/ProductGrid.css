@@ -1,0 +1,64 @@
+.collection-root {
+  background: #07111d;
+  padding: 70px 0 100px;
+}
+
+.collection-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 26px;
+}
+
+.collection-header {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.collection-header h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #dbe8ff;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.collection-header p {
+  font-size: 14px;
+  color: #97acc4;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* responsive grid of perfume cards */
+.collection-grid {
+  display: grid;
+  /* use fixed column width so cards remain the same size regardless of count */
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: center;
+  gap: 26px;
+  margin-top: 32px;
+}
+
+/* subtle fade animation */
+.collection-grid {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .collection-header h2 {
+    font-size: 26px;
+  }
+}

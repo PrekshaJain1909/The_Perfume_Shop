@@ -1,0 +1,282 @@
+/* Page background + base layout */
+.luxora-page {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top right, #f3e4d8 0, #f8eee4 40%, #fff 80%);
+  color: #2c1b16;
+}
+
+/* NAVBAR */
+.luxora-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 243, 234, 0.95),
+    rgba(250, 243, 234, 0.9),
+    rgba(250, 243, 234, 0.6)
+  );
+  border-bottom: 1px solid rgba(180, 140, 110, 0.15);
+}
+
+.luxora-navbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.luxora-logo {
+  font-size: 18px;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.luxora-nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-link {
+  border: none;
+  background: none;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #5a3b2f;
+  padding: 4px 0;
+}
+
+.nav-link:hover {
+  color: #d18c5d;
+}
+
+.nav-cart {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* HERO */
+.luxora-hero-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 20px 80px;
+}
+
+.luxora-hero {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.luxora-hero-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: #7c5d4a;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-primary {
+  background: #1f120f;
+  color: #fcefe2;
+}
+
+.btn-primary:hover {
+  background: #3a231c;
+}
+
+.btn-secondary {
+  background: #f6ece3;
+  border-color: #e0c8b5;
+  color: #5a3b2f;
+}
+
+.btn-secondary:hover {
+  background: #f1e1d4;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9e5d4;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 12px;
+  color: #7a4e34;
+  border: 1px solid rgba(206, 153, 115, 0.4);
+}
+
+.hero-badge-icon {
+  font-size: 14px;
+}
+
+/* COLLECTION SECTION */
+.collection-section {
+  margin-top: 40px;
+}
+
+.collection-header {
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.collection-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.collection-subtitle {
+  font-size: 14px;
+  color: #7a5a47;
+}
+
+/* Product grid */
+.product-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Product card */
+.product-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(38, 14, 4, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, translate 0.18s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(37, 15, 6, 0.14);
+}
+
+.product-image-wrapper {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 12px 14px 14px;
+}
+
+.product-name {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.product-short {
+  font-size: 11px;
+  color: #8c6a56;
+  margin-bottom: 6px;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.product-rating span:first-child {
+  font-size: 11px;
+}
+
+.reviews {
+  margin-left: 4px;
+  color: #b39480;
+}
+
+.product-price {
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .luxora-navbar-inner {
+    padding-inline: 16px;
+  }
+
+  .luxora-nav-links {
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxora-logo {
+    font-size: 16px;
+    letter-spacing: 0.22em;
+  }
+}

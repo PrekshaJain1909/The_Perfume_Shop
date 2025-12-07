@@ -1,0 +1,88 @@
+/* ------------------------------- */
+/* GLOBAL RESET & BASE STYLES      */
+/* ------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Prevent images from dragging ghost preview */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ------------------------------- */
+/* LAYOUT UTILITIES                */
+/* ------------------------------- */
+
+.container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+/* <!-- For titles & headings --> */
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ------------------------------- */
+/* SCROLLBAR STYLING (OPTIONAL)    */
+/* ------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8d7e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d74b84;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8346a;
+}
+
+/* ------------------------------- */
+/* RESPONSIVE FONT TWEAKS          */
+/* ------------------------------- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}

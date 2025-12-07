@@ -1,0 +1,127 @@
+.footer-root {
+  position: relative;
+  background: #102b45;
+  padding: 60px 8% 24px;
+  color: #dbe8ff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 🌫 perfume mist */
+.footer-root::before,
+.footer-root::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190%;
+  height: 160px;
+  background: radial-gradient(
+    circle,
+    rgba(244, 195, 131, 0.18),
+    rgba(255, 255, 255, 0)
+  );
+  filter: blur(55px);
+  animation: mistFloat 9s infinite ease-in-out;
+  pointer-events: none;
+  bottom: 0;
+}
+
+.footer-root::after {
+  animation-delay: 4s;
+  opacity: 0.75;
+}
+
+@keyframes mistFloat {
+  0% { opacity: 0.45; }
+  50% { opacity: 1; }
+  100% { opacity: 0.45; }
+}
+
+/* content layout */
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-facts li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #b5c8df;
+  line-height: 1.7;
+}
+
+/* bottom strip */
+.footer-bottom {
+  margin-top: 38px;
+  padding-top: 18px;
+  font-size: 13px;
+  color: #9fb3c9;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* 💨 floating perfume bottle emojis (🧴) */
+
+.floating-bottles {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;        /* they float across full height */
+  pointer-events: none; /* don't block normal page clicks */
+  overflow: hidden;
+  z-index: 3;
+}
+
+.perfume-bottle {
+  position: absolute;
+  bottom: -40px;        /* start slightly below screen */
+  animation-name: bottleFloatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: auto; /* clickable even though parent is none */
+}
+
+/* float up */
+@keyframes bottleFloatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* smaller on mobile */
+@media (max-width: 550px) {
+  .footer-root {
+    padding: 42px 6% 20px;
+  }
+}

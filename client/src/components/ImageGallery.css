@@ -1,0 +1,125 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Main image container */
+.gallery-main-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0e2236;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-main-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* slight zoom on hover */
+.gallery-main-wrapper:hover .gallery-main-image {
+  transform: scale(1.02);
+}
+
+/* Left/right navigation arrows */
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(219, 232, 255, 0.82);
+  color: #0e1620;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  transition: background 0.22s ease, transform 0.22s ease;
+}
+
+.gallery-nav-btn.left {
+  left: 12px;
+}
+
+.gallery-nav-btn.right {
+  right: 12px;
+}
+
+.gallery-nav-btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.06);
+}
+
+/* Thumbnails row */
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 2px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scroll-behavior: smooth;
+}
+
+.gallery-thumbnail-btn {
+  border: 1px solid transparent;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  flex: 0 0 auto;
+  position: relative;
+  transition: border 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-thumbnail-image {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  display: block;
+}
+
+/* active thumbnail highlight */
+.gallery-thumbnail-btn.active {
+  border: 2px solid #3a9bff;
+  box-shadow: 0 0 16px rgba(58, 155, 255, 0.25);
+}
+
+.gallery-thumbnail-btn:not(.active):hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* scrollbar styling */
+.gallery-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+.gallery-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+  background: #3a9bff;
+  border-radius: 999px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery-main-image {
+    max-height: 310px;
+  }
+
+  .gallery-thumbnail-image {
+    width: 62px;
+    height: 62px;
+  }
+}

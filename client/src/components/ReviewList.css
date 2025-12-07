@@ -1,0 +1,136 @@
+.review-list-container {
+  margin-top: 32px;
+  padding: 20px 18px 10px;
+  border-radius: 18px;
+  background: #050c14;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Header */
+.review-list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.review-list-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #dbe8ff;
+}
+
+.review-list-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #9fb3c9;
+}
+
+.review-list-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-list-average {
+  font-weight: 600;
+  color: #f6c453;
+}
+
+.review-list-count {
+  color: #7f92ab;
+}
+
+.review-list-empty {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #9fb3c9;
+}
+
+/* Stars */
+.review-star {
+  font-size: 15px;
+}
+
+.review-star.filled {
+  color: #f6c453;
+}
+
+.review-star.empty {
+  color: #3a4659;
+}
+
+/* Review items */
+.review-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.review-card {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: radial-gradient(circle at top left, #16253a 0, #0b1626 55%, #07101e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #3a9bff, #182435);
+  color: #dbe8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.review-author {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e3eeff;
+}
+
+.review-date {
+  margin: 0;
+  font-size: 11px;
+  color: #8a9db5;
+}
+
+.review-card-rating {
+  margin-top: 6px;
+}
+
+.review-comment {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #c3d3e9;
+  line-height: 1.6;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .review-list-container {
+    padding: 16px 14px 8px;
+  }
+
+  .review-card {
+    padding: 12px 12px;
+  }
+}
