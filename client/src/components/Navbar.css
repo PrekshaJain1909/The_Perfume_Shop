@@ -22,13 +22,30 @@
   display: none;
 }
 
+
+/* Logo area */
 .nav-logo a {
-  font-size: 18px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #dbe8ff;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
+
+/* configurable logo sizes via CSS variables */
+:root {
+  --logo-size-desktop: 48px;
+  --logo-size-mobile: 36px;
+}
+
+.nav-logo-link { display: inline-flex; align-items: center; gap: 10px; }
+.nav-logo-img {
+  width: var(--logo-size-desktop);
+  height: auto;
+  max-height: var(--logo-size-desktop);
+  object-fit: contain;
+  display: block;
+}
+.nav-logo-text { font-size: 18px; font-weight: 600; color: #fff; }
 
 /* Desktop nav links - rightmost */
 .nav-links {
@@ -115,6 +132,12 @@
   .nav-inner {
     justify-content: space-between;
     padding: 0 16px;
+  }
+
+  /* reduce logo size on narrow screens */
+  .nav-logo-img {
+    width: var(--logo-size-mobile);
+    max-height: var(--logo-size-mobile);
   }
 
   /* hide desktop links on mobile */
@@ -237,4 +260,8 @@
 
 .nav-links-mobile .nav-logout-btn:hover {
   color: #ffffff;
+}
+h1{
+  color: #dbe8ff;
+  font-size: 25px;
 }

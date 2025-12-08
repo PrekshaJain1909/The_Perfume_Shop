@@ -22,8 +22,9 @@ const Navbar = () => {
       <div className="nav-inner">
         {/* Logo on the left */}
         <div className="nav-logo">
-          <Link to="/" onClick={closeMenu}>
-            The Perfume Club
+          <Link to="/" onClick={closeMenu} className="nav-logo-link">
+            <img src="/images/logoo.png" alt="The Perfume Club" className="nav-logo-img" />
+             <h1>The Perfume Club</h1>
           </Link>
         </div>
 

@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} The Perfume Club — All Rights Reserved.
+          © {new Date().getFullYear()} The Perfume Club by Preksha Jain — All Rights Reserved.
         </div>
       </footer>
     </>

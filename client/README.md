@@ -30,3 +30,7 @@ VITE_API_BASE_URL=https://the-perfume-shop.onrender.com/api
 Notes:
 - The API URL should include the `/api` path segment because client code appends resource paths like `/orders` and `/products` to the base URL.
 - If deploying the frontend separately, set the same `VITE_API_BASE_URL` in your host environment (Netlify, Vercel, etc.) so the built client targets the correct backend.
+
+Favicon / Logo
+- The navbar uses the image at `src/assets/react.svg` by default. To change the site logo, replace that file or update `src/components/Navbar.jsx` to point to a different asset.
+- The favicon referenced in `client/index.html` can be replaced by placing `logo.png` (or your preferred file) into `client/public/` or by updating the `<link rel="icon">` path in `index.html`.
