@@ -77,14 +77,15 @@ npm run dev
 ```
 ---
 🖼 Screenshots 
-```
+
 Add your screenshots and update image paths
 
 ![Homepage](./assets/homepage.png)
-![Product Page](./assets/product-page.png)
-![Collections](./assets/collections.png)
-![Cart](./assets/cart.png)
-```
+![Product Page](./assets/ProductPage.png)
+![Cart](./assets/CartPage.png)
+![Receipt](./assets/receiptPage.png)
+
+
 ---
 ⭐ Support the Project
 
