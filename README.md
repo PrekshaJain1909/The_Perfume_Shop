@@ -78,12 +78,11 @@ npm run dev
 ---
 🖼 Screenshots 
 
-Add your screenshots and update image paths
+![Homepage](https://github.com/PrekshaJain1909/The_Perfume_Shop/blob/master/client/src/assets/homepage.png)
+![Product Page](https://github.com/PrekshaJain1909/The_Perfume_Shop/blob/master/client/src/assets/ProductPage.png)
+![Cart](https://github.com/PrekshaJain1909/The_Perfume_Shop/blob/master/client/src/assets/CartPage.png)
+![Receipt Page](https://github.com/PrekshaJain1909/The_Perfume_Shop/blob/master/client/src/assets/receiptPage.png)
 
-![Homepage](./assets/homepage.png)
-![Product Page](./assets/ProductPage.png)
-![Cart](./assets/CartPage.png)
-![Receipt](./assets/receiptPage.png)
 
 
 ---
